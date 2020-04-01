@@ -85,6 +85,8 @@ def country():
         iso2="CM"
         try:
             iso2=geoip_data['location']["country"]
+            if iso2 == "ZZ":
+                iso2="CM"
         except:
             iso2="CM"
             
