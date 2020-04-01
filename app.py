@@ -81,9 +81,13 @@ def country():
 
     else:
         geoip_data = simple_geoip.get_geoip_data()
-        print(geoip_data)
-        iso2=geoip_data['location']["country"]
+        
         iso2="CM"
+        try:
+            iso2=geoip_data['location']["country"]
+        except:
+            iso2="CM"
+            
         data=get_country_data(iso2, True)
 
         if not data:
