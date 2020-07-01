@@ -7,7 +7,7 @@ reset="Day are reset at 2:00 GMT"
 def get_data():
     
     try:
-        res=requests.get("https://corona.lmao.ninja/countries")
+        res=requests.get("https://corona.lmao.ninja/v3/covid-19/countries")
         print("End")
         json_data=json.loads(res.text)
         return json_data
