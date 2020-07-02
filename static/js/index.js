@@ -12,7 +12,6 @@ $('#todayCases').animateNumber(
     number: parseInt($('#todayCases').text()),
     color: 'red',
     'font-size': '30px',
-	width: '100%'
 	
   },
   {
